@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="getvalue()">값 출력</button>
+    <p id="number"></p>
+    <script>
+        function getvalue() {
+            const randvalue = Math.floor(Math.random() * 19) + 1;
+            const pTag = document.querySelector('#number');
+            pTag.textContent = `${randvalue}세`;
+
+            if(randvalue < 13){
+                alert('나이 : '+ randvalue + "세 어린이입니다.");
+            } else if(randvalue >= 13 && randvalue < 19) {
+                alert(`나이 : ${randvalue},세 청소년 입니다`);
+            } else if(randvalue >= 19) {
+                alert(`나이 : ${randvalue},세 성인 입니다`);
+            } 
+        }
+
+
+
+
+
+
+
+
+    </script>
+        
+</body>
+</html>

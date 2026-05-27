@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="getvalue()">값 출력</button>
+    <p id="number"></p>
+    <script>
+        function getvalue() {
+            const randvalue = Math.floor(Math.random() * 100) + 1; // 1~100 사이 랜덤값
+            const pTag = document.querySelector('#number');
+            pTag.textContent =  `${randvalue}`;
+
+            if(randvalue >= 90){
+                alert('점수:' + randvalue + "학점 : A");
+            } else if(randvalue >= 80) {
+                alert(`점수 : ${randvalue} 학점 : B`);
+            } else if(randvalue >= 70) {
+                alert(`점수 : ${randvalue} 학점 : C`);
+            } else if(randvalue >= 60) {
+                alert(`점수 : ${randvalue} 학점 : D`);
+            } else if(randvalue >= 50){
+                alert(`점수 : ${randvalue} 학점 : F`);
+            }
+        }
+    </script>
+</body>
+</html>
